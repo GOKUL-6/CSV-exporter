@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Export As CSV",
+  "version": "1.0",
+  "description": "Export values to CSV",
+  "action": {
+    "default_icon": "icons8-export-csv-48.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage"]
+}
