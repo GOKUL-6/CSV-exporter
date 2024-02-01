@@ -4,15 +4,15 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function exportToCSV() {
-  var inputValue = document.getElementById("inputValue").value;
+  let accValue = document.getElementById("inputValue").value;
+  let idValue = document.getElementById("inputValue2").value;
 
-  if (inputValue.trim() === "") {
+  if (accValue.trim() === "" || idValue.trim() === "") {
     alert("Please enter a value.");
     return;
   }
-
-  var csvContent =
-    "data:text/csv;charset=utf-8," + encodeURIComponent(inputValue);
+  var arr = [accValue, idValue];
+  var csvContent = "data:text/csv;charset=utf-8," + encodeURIComponent(arr);
   var link = document.createElement("a");
   link.href = csvContent;
   link.download = "exported_data.csv";
